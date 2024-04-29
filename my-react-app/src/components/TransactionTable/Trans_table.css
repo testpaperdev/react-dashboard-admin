@@ -1,0 +1,40 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-weight: 400;
+}
+thead {
+  border-radius: 20px;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  text-align: center;
+}
+
+th {
+  background-color: lightcoral;
+  font-weight: 600;
+}
+
+tr {
+  color: black;
+  border-radius: 10px;
+}
+tbody {
+  border: 1px solid black;
+}
+
+.btn_dw {
+  border: 1px solid #e88d8d;
+  border-radius: 7px;
+  color: #d75252;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}

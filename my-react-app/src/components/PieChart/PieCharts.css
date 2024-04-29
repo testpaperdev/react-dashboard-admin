@@ -1,0 +1,17 @@
+.grid-on-item {
+  display: block;
+}
+
+.pie-chart {
+  display: grid;
+  place-items: center;
+}
+
+PieChart {
+  width: 400px;
+  height: 200px;
+  align-items: center;
+}
+Pie {
+  size: 200px;
+}

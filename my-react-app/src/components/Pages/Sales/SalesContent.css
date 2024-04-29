@@ -1,0 +1,78 @@
+.main-content1-holder {
+  display: grid;
+  row-gap: 20px;
+  height: 100px;
+  background-color: white;
+}
+
+.main-content-holder {
+  display: grid;
+  row-gap: 20px;
+  height: 100px;
+}
+.content-grid-sales {
+  display: grid;
+  margin: 30px;
+  width: 95%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 350px;
+  column-gap: 16px;
+  row-gap: 16px;
+  height: 400px;
+}
+.content-grid2-sales {
+  display: grid;
+  margin: 30px;
+  width: 95%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 150px 150px;
+  column-gap: 16px;
+  row-gap: 16px;
+  height: 400px;
+}
+.card-content2 .content-grid-sales2 {
+  display: grid;
+  margin: 30px;
+  width: 95%;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 16px;
+}
+.subgrid-two {
+  display: grid;
+  row-gap: 20px;
+  height: 100%;
+}
+.card-content {
+  /* display: flex; */
+  height: 90%;
+  background-color: white;
+  border-radius: 10px;
+}
+.card-content2 {
+  /* display: flex; */
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .content-grid-sales,
+  .content-grid-two {
+    column-gap: 12px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .content-grid-sales,
+  .content-grid-sales2 {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 12px;
+    column-gap: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .content-grid-sales,
+  .content-grid-two {
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 0;
+  }
+}
