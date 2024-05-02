@@ -10,6 +10,7 @@ import { keepTheme } from "../../utils/theme";
 import { DownOutlined, SearchOutlined } from "@ant-design/icons";
 import { Dropdown, Avatar, Space } from "antd";
 import { AiFillAppstore, AiFillAndroid, AiFillSetting } from "react-icons/ai";
+import { IoCloseOutline } from "react-icons/io5";
 import { MdLogout } from "react-icons/md";
 import { FaMoon } from "react-icons/fa";
 import { SearchBar } from "./Search_component/SearchBar";
@@ -241,6 +242,10 @@ const ContentTop = () => {
   const [openProfile, setOpenProfile] = useState(false);
   const [openHover, setOpenHover] = useState(true);
 
+  // close profile
+  const openList = () => setOpenProfile(true);
+  const closeList = () => setOpenProfile(false);
+
   // close when click anywhere
   let menuRef = useRef();
 
@@ -294,11 +299,9 @@ const ContentTop = () => {
               menu={{
                 items: app_item,
                 style: {
-                  // display: "grid",
-                  // gridTemplateColumns: "repeat(4,1fr)",
-
-                  marginTop: "15px",
-                  left: "-5px",
+                  position: "absolute",
+                  top: "15px",
+                  right: "-5px",
                 },
               }}
               trigger={["click"]}
@@ -333,7 +336,7 @@ const ContentTop = () => {
             <Dropdown
               menu={{
                 items: notification_item,
-                style: { marginTop: "10px" },
+                style: { position: "absolute", top: "15px", right: "-5px" },
               }}
               trigger={["click"]}
               className="dropdown-noti"
@@ -350,12 +353,7 @@ const ContentTop = () => {
 
           {/* Profile-Icon Items */}
           <div>
-            <button
-              className="icon-btn"
-              onClick={() => {
-                setOpenProfile(!openProfile);
-              }}
-            >
+            <button className="icon-btn" onClick={openList}>
               <Avatar style={{ backgroundColor: "green", color: "white" }}>
                 {Profileimg(userProfile[0].firstname, userProfile[0].lastname)}
               </Avatar>
@@ -366,6 +364,12 @@ const ContentTop = () => {
                   className={`profile-container ${openProfile ? "active" : ""}`}
                   ref={menuRef}
                 >
+                  <div className="close-btn">
+                    <IoCloseOutline
+                      onClick={closeList}
+                      className="close-icon"
+                    />
+                  </div>
                   <li>{userProfile[0].email}</li>
                   <li>
                     <img

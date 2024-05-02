@@ -21,11 +21,13 @@ export default function Sidebar() {
   return (
     <div className={`sidebar ${sidebarClass}`}>
       <div className="user-info">
-        <div className="info-img img-fit-cover">
+        <div className="info-img ">
           <img src={userProfile[0].photo} alt="profile image" />
         </div>
-        <span className="info-name">{userProfile[0].name}</span>
-        <span className="info-email">{userProfile[0].email}</span>
+        <div className="info-user-name-email">
+          <span className="info-name">{userProfile[0].name}</span>
+          <span className="info-email">{userProfile[0].email}</span>
+        </div>
       </div>
       <nav className="navigation">
         {/* <Link to="/"></Link> */}

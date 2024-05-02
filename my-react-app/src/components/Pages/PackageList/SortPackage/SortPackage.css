@@ -1,0 +1,25 @@
+.sort-btn {
+  display: flex;
+}
+.sort-btn h3 {
+  font-size: 12px;
+  font-weight: 400;
+  color: #888;
+}
+.sort-btn button {
+  width: 80px;
+  height: 25px;
+  box-shadow: 0 0 4px 0 salmon;
+  border-radius: 10px;
+  margin-left: 10px;
+  color: salmon;
+  font-size: 12px;
+  font-weight: 600;
+}
+.sort-btn button:hover {
+  background-color: rgb(251, 219, 216);
+}
+.relevance-btn.active,
+.latest-btn.active {
+  background-color: rgb(251, 219, 216);
+}

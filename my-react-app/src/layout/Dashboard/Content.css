@@ -2,7 +2,7 @@
   background-color: rgb(224, 237, 250);
   flex: 1;
   padding: 30px;
-  height: 1100px;
+  height: 1200px;
 }
 @media screen and (max-width: 1400px) {
   .main-content {

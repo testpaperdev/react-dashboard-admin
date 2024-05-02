@@ -1,0 +1,76 @@
+.filter-content {
+  border-radius: 10px;
+  border: 2px solid #d4d4d4;
+}
+.filter-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+.filter-title h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+.filter-variation {
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+.variation-list {
+  height: 60px;
+}
+.variation-list.active {
+  height: auto;
+  transform: 0.3s;
+}
+.filter-btn {
+  margin: 10px;
+  width: 90%;
+  min-height: 30px;
+  height: auto;
+  /* border-radius: 5px; */
+  box-shadow: 0 1px 0 0 #888;
+}
+.filter-btn:hover {
+  background-color: #ececec;
+  transition: 0.3s;
+}
+.arrow-btn {
+  position: relative;
+  left: 60px;
+  top: 3px;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+.arrow-btn.active {
+  transform: rotate(90deg);
+}
+.variation-item {
+  opacity: 0;
+  margin: 10px;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: 0.3s ease;
+}
+
+.variation-item.active {
+  opacity: 1;
+  margin: 10px;
+  visibility: visible;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+.variation-list li {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 20px 1fr;
+  gap: 10px;
+  margin: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.filter-checkbox {
+  /* display: inline; */
+  width: 12px;
+}

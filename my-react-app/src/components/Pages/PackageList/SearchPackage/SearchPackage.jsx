@@ -31,7 +31,7 @@ export const SearchPackage = ({ setResults }) => {
     <div className="input-wrapper">
       <FaSearch id="search-icon" style={{ color: "gray" }} />
       <input
-        placeholder="Search..."
+        placeholder="Search Product..."
         value={input}
         onChange={(e) => handleChange(e.target.value)}
         style={{ fontSize: "14px" }}
